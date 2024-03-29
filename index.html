@@ -73,6 +73,8 @@
 
 </div>
 
+<div id="footerContainer"></div>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -102,6 +104,13 @@
             document.getElementById('room-info-section').innerHTML = data;
         })
         .catch(error => console.error(error));
+
+    // Include footer using JavaScript Fetch API
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footerContainer').innerHTML = data;
+        });
 </script>
 
 </body>
