@@ -94,6 +94,12 @@
         .then(data => {
             document.getElementById('navbarContainer').innerHTML = data;
         });
+    // Include footer using JavaScript Fetch API
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('FooterContainer').innerHTML = data;
+        });
     // Include roominfo using JavaScript Fetch API
 
         fetch('roominfo.html')
